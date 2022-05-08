@@ -13,5 +13,10 @@ router.get('/test',(req,res)=>{
         'Test':'This is a test'
     })
 })
+router.get('/test2',(req,res)=>{
+    res.json({
+        'Test':'This is an another test'
+    })
+})
 app.use('/.netlify/functions/api',router)
 module.exports.handler = serverless(app)
